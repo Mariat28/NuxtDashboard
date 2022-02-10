@@ -29,21 +29,21 @@
             <!-- expanded nav  -->
             <div class="h-64 w-64 shadow-lg bg-white rounded-md absolute right-0 top-16 mr-2 flex flex-col justify-between text-lg transition ease-in-out delay-150 duration-300" v-if="isOpen" :class="[isOpen ? 'transition-y-6' : '']">
               <NuxtLink to="/" class="p-2 text-center cursor-pointer hover:text-blue-900 hover:animate-pulse">Home</NuxtLink>
-              <NuxtLink to="/dashboard" class="p-2 text-center hover:text-blue-900">Dashboard</NuxtLink>
-              <NuxtLink to="/projects" class="p-2 text-center hover:text-blue-900">Projects</NuxtLink>
-              <NuxtLink to="/tasks" class="p-2 text-center hover:text-blue-900">Tasks</NuxtLink>
-              <NuxtLink to="/reports" class="p-2 text-center hover:text-blue-900">Reporting</NuxtLink>
-              <NuxtLink to="/users" class="p-2 text-center hover:text-blue-900">Users</NuxtLink>
+              <NuxtLink to="/" class="p-2 text-center hover:text-blue-900">Dashboard</NuxtLink>
+              <NuxtLink to="/" class="p-2 text-center hover:text-blue-900">Projects</NuxtLink>
+              <NuxtLink to="/" class="p-2 text-center hover:text-blue-900">Tasks</NuxtLink>
+              <NuxtLink to="/" class="p-2 text-center hover:text-blue-900">Reporting</NuxtLink>
+              <NuxtLink to="/" class="p-2 text-center hover:text-blue-900">Users</NuxtLink>
             </div>
           </div>
         <!-- navlinks  -->
         <div class="ml-4 text-sm text-black invisible lg:visible">
           <NuxtLink to="/" >Home</NuxtLink>
-          <NuxtLink to="/dashboard" class="pl-2">Dashboard</NuxtLink>
-          <NuxtLink to="/projects" class="pl-2">Projects</NuxtLink>
-          <NuxtLink to="/tasks" class="pl-2">Tasks</NuxtLink>
-          <NuxtLink to="/reports" class="pl-2">Reporting</NuxtLink>
-          <NuxtLink to="/users" class="pl-2">Users</NuxtLink>
+          <NuxtLink to="/" class="pl-2">Dashboard</NuxtLink>
+          <NuxtLink to="/" class="pl-2">Projects</NuxtLink>
+          <NuxtLink to="/" class="pl-2">Tasks</NuxtLink>
+          <NuxtLink to="/" class="pl-2">Reporting</NuxtLink>
+          <NuxtLink to="/" class="pl-2">Users</NuxtLink>
         </div>
       </div>
         <!-- rightside menu  -->
