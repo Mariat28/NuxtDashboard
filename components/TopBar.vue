@@ -66,7 +66,7 @@
               </svg>
             </div>
             <div class="rounded-full h-12 w-12  ml-4 overflow-hidden flex justify-center">
-              <img src="../assets/images/profile.png" alt="profile Image" class="rounded-full"/>
+              <img src="@/assets/images/profile.png" alt="profile Image" class="rounded-full"/>
             </div>
           </div>
 
