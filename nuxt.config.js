@@ -1,5 +1,6 @@
 export default {
   // deploying to github pages
+  mode: 'spa',
   target: 'static',
   router: {
     base: '/NuxtDashboard/'
