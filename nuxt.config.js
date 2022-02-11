@@ -1,4 +1,10 @@
 export default {
+  // deploying to github pages
+  mode: 'spa',
+  target: 'static',
+  router: {
+    base: '/NuxtDashboard/'
+  },
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'nuxt-Dashboard',
@@ -70,5 +76,6 @@ export default {
         autoprefixer: {},
       },
     },
-  }
+  },
+
 }
