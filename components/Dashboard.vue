@@ -6,7 +6,7 @@
     </div>
     <!-- semi topnav -->
     <div class="bg-white h-full overflow-y-auto">
-      <div class=" p-4 pr-0 lg:mt-24 xl:mx-auto container invisible lg:visible">
+      <div class=" p-2 pr-0 lg:mt-24 xl:mx-auto xl:container invisible lg:visible">
         <div class=" flex justify-between">
           <div class="text-sm flex items-center  pl-0">
             <div class="bg-gray-100 rounded p-2"><NuxtLink to="/" >Overview</NuxtLink></div>
@@ -28,9 +28,9 @@
       </div>
       <hr class="invisible lg:visible"/>
       <!-- content section  -->
-      <div class="lg:container lg:mx-auto lg:mt-4 mt-12">
+      <div class="md:container md:mx-auto lg:mt-4 mt-12">
         <!-- content header  -->
-        <div class="flex md:justify-between flex-wrap items-center ml-2 lg:ml-0">
+        <div class="flex md:justify-between flex-wrap items-center ml-2 lg:ml-2">
           <!-- greeting  -->
           <div class="flex flex-col ">
             <h4 class="md:text-2xl text-xl">Welcome Back, Olivia</h4>
