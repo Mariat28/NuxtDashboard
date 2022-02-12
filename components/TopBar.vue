@@ -1,11 +1,11 @@
 <template>
-  <div class="p-0 bg-white h-24 fixed top-0  inset-x-0 w-screen flex flex-col justify-center">
-    <div class="xl:container xl:mx-auto flex items-center justify-between p-1">
+  <div class="p-2 bg-white md:h-24 h-12 fixed top-0  inset-x-0 w-screen flex flex-col justify-center">
+    <div class="xl:container xl:mx-auto flex items-center justify-between">
       <!-- leftside menu  -->
       <div class="flex items-center">
         <!-- logo  -->
           <div class="flex items-center">
-            <div class="rounded-sm h-10 w-10 bg-blue-100">
+            <div class="rounded-md h-10 w-10 bg-blue-100 shadow-md">
               <!-- icon div  -->
             </div>
             <div class="text-black font-semibold text-base ml-2 min-w-fit flex">
@@ -15,19 +15,21 @@
           </div>
         <!-- hamburger menu -->
 
-          <div class="flex flex-col justify-center items-center" >
-            <div class=" lg:invisible flex flex-col mr-2 visible absolute right-0 " @click="openMenu" v-if="!isOpen">
+          <div class="flex  justify-center items-center" >
+            <div class=" lg:invisible flex flex-col mr-2 visible absolute right-0  top-6 md:top-8" @click="openMenu" v-if="!isOpen">
               <div class=" lg:invisible flex flex-col mr-2 visible absolute right-0">
-              <span class="h-0.5 border-none w-6 outline-none bg-black"></span>
-              <span class="h-0.5 border-none w-4 outline-none bg-black mt-2"></span>
-              <span class="h-0.5 border-none w-6 outline-none bg-black mt-2"></span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+                </svg>
               </div>
             </div>
           <div class=" lg:invisible flex flex-col mr-2 visible absolute right-0"  @click="closeMenu" v-else>
-            <span class="h-4  w-6 outline-none text-black text-4xl cursor-pointer" >x</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
           </div>
             <!-- expanded nav  -->
-            <div class="h-64 w-64 shadow-lg bg-white rounded-md absolute right-0 top-16 mr-2 flex flex-col justify-between text-lg transition ease-in-out delay-150 duration-300" v-if="isOpen" :class="[isOpen ? 'transition-y-6' : '']">
+            <div class="h-64 w-64 shadow-lg bg-white rounded-md absolute right-0 top-20 mr-2 flex flex-col justify-between text-lg transition ease-in-out delay-150 duration-300" v-if="isOpen" :class="[isOpen ? 'transition-y-6' : '']">
               <NuxtLink to="/" class="p-2 text-center cursor-pointer hover:text-blue-900 hover:animate-pulse">Home</NuxtLink>
               <NuxtLink to="/" class="p-2 text-center hover:text-blue-900">Dashboard</NuxtLink>
               <NuxtLink to="/" class="p-2 text-center hover:text-blue-900">Projects</NuxtLink>
@@ -71,7 +73,7 @@
           </div>
 
     </div>
-    <hr class="md:mt-4 -mt-4 w-full">
+    <hr class="md:mt-4 -mt-6 w-full">
   </div>
 </template>
 <script>
