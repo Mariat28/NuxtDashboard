@@ -5,7 +5,7 @@
       <TopBar/>
     </div>
     <!-- semi topnav -->
-    <div class="bg-white h-full overflow-y-auto">
+    <div class="bg-white h-full overflow-y-auto overflow-x-hidden">
       <div class=" p-2 pr-0 lg:mt-24 xl:mx-auto xl:container invisible lg:visible">
         <div class=" flex justify-between">
           <div class="text-sm flex items-center  pl-0">
@@ -28,9 +28,9 @@
       </div>
       <hr class="invisible lg:visible"/>
       <!-- content section  -->
-      <div class="xl:container xl:mx-auto lg:mt-4 mt-6 md:mt-12 p-1">
+      <div class="xl:container xl:mx-auto lg:mt-4 mt-6 md:mt-12 p-1 ">
         <!-- content header  -->
-        <div class="flex md:justify-between flex-wrap items-center ml-1 lg:ml-2">
+        <div class="flex md:justify-between flex-wrap items-center ml-1 lg:ml-2 ">
           <!-- greeting  -->
           <div class="flex flex-col ">
             <h4 class="md:text-2xl text-xl">Welcome Back, Olivia</h4>
@@ -170,7 +170,7 @@
             </div>
           </div>
           <!-- search  -->
-          <div class="input-group relative  flex w-full md:w-fit p-1 items-center rounded border border-solid border-gray-300 bg-white  focus-within:border-blue-600 focus-within:outline-none md:mt-4  h-fit mt-6">
+          <div class="input-group flex mb-6 md:mb-0  md:w-fit p-1 items-center rounded border border-solid border-gray-300   focus-within:border-blue-600 focus-within:outline-none md:mt-4  h-fit mt-6">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 ml-2" fill="none" viewBox="0 0 24 24" stroke="#C1C1C1">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
             </svg>
@@ -180,7 +180,7 @@
         </div>
         <!-- table area  -->
         <div class="mt-4 p-1 ">
-          <Table2/>
+          <Table/>
         </div>
       </div>
 

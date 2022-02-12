@@ -1,7 +1,7 @@
 <template>
-  <div class="rounded border border-slate-300">
+  <div class="rounded border border-slate-300 flex justify-between">
     <table >
-      <thead class="flex justify-around">
+      <thead class="">
         <tr>
           <th>Company</th>
           <th>License</th>
