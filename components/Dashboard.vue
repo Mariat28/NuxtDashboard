@@ -5,7 +5,7 @@
       <TopBar/>
     </div>
     <!-- semi topnav -->
-    <div class="bg-white h-full overflow-y-auto overflow-x-hidden">
+    <div class="bg-white h-full overflow-y-auto overflow-x-hidden -z-50">
       <div class=" p-2 pr-0 lg:mt-24 xl:mx-auto xl:container invisible lg:visible">
         <div class=" flex justify-between">
           <div class="text-sm flex items-center  pl-0">
@@ -17,7 +17,7 @@
             <NuxtLink to="/" class="pl-3" >User reports</NuxtLink>
           </div>
           <!-- right search  -->
-          <div class="input-group relative w-72 ml-10 mr-2 flex  items-center rounded border border-solid border-gray-300 focus-within:border-blue-600 focus-within:outline-none">
+          <div class="input-group relative w-72 ml-10 mr-2 flex  items-center rounded border border-solid border-gray-300 focus-within:border-blue-600 focus-within:outline-none ">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 ml-2" fill="none" viewBox="0 0 24 24" stroke="#C1C1C1">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
             </svg>
