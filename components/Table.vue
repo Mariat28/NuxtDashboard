@@ -1,17 +1,20 @@
 <template>
-  <div class="flex flex-col shadow-md rounded-lg border border-slate-300 w-full">
+  <div class="flex flex-col shadow-md rounded-lg  w-full border-gray-200 border">
     <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8 ">
       <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8 ">
-        <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg ">
+        <div class="shadow lg:overflow-hidden overflow-x-auto border-b border-gray-200  ">
           <table class="min-w-full divide-y divide-gray-200 ">
             <thead class="bg-white">
               <tr class="">
                 <th scope="col" class="px-6 py-3 text-left text-sm font-medium text-slate-700  tracking-wider">
-                  <div class="form-check">
-                    <input class="form-check-input appearance-none h-4 w-4 border border-gray-300 rounded bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" type="checkbox" value="" id="flexCheckIndeterminate">
+                  <div class="form-check flex items-center">
+                    <input class="form-check-input appearance-none h-4 w-4 border border-gray-300 rounded bg-white checked:accent-purple-600 checked:border-purple-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" type="checkbox" value="" id="flexCheckIndeterminate">
                     <label class="form-check-label inline-block text-gray-800" for="flexCheckIndeterminate">
                       Company
                     </label>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-slate-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 13l-5 5m0 0l-5-5m5 5V6" />
+                    </svg>
                   </div>
                   </th>
                 <th scope="col" class="px-6 py-3 text-left text-sm font-medium text-slate-700  tracking-wider">License use</th>
@@ -26,10 +29,12 @@
             <tbody class="bg-white divide-y divide-gray-200">
               <tr v-for="company in companies" :key="company.email" class="odd:bg-white even:bg-gray-50">
                 <td class="px-6 py-4 whitespace-nowrap flex items-center">
-                    <input class="form-check-input appearance-none h-4 w-4 border border-gray-300 rounded bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" type="checkbox" value="" id="flexCheckIndeterminate">
+                  <div class="form-check">
+                    <input class="form-check-input appearance-none accent-purple-100 h-4 w-4 border border-gray-300 rounded bg-white checked:bg-purple-100 checked:border-purple-700 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" type="checkbox" value="" id="flexCheckChecked">
+                  </div>
                   <div class="flex items-center">
                     <div class="flex-shrink-0 h-10 w-10">
-                      <img class="h-10 w-10 rounded-full" :src="company.image" alt="" />
+                      <img class="h-10 w-10 rounded-full" :src="company.image"  alt="" />
                     </div>
                     <div class="ml-4">
                       <div class="text-sm font-medium text-gray-900">
@@ -46,30 +51,30 @@
                   <div class="bg-purple-600 h-1.5 rounded-full" :style="{width: company.license + '%'}"></div>
                   </div>
                 </td>
-                <td class="px-6 py-4 whitespace-nowrap">
-                  <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800" :class="['']"> {{company.status}} </span>
+                <td class="px-6 py-4 whitespace-nowrap" >
+                  <span class="px-2 py-1 inline-flex text-xs leading-5 font-semibold rounded-full  text-green-800" :class="[ company.status === 'Customer' ? 'bg-green-100' : 'bg-gray-100' ]"> {{company.status}} </span>
                 </td>
                 <td class="text-sm text-gray-500 inline-block text-start" >
-                  <div class=" flex -space-x-4 items-center" >
-                    <div  v-for="(user, index) in company.users.slice(0, 5)" :key="index" class="rounded-full h-10 w-10 ">
-                      <img class="inline-block h-8 w-8 rounded-full ring-2 ring-white" :src="user" alt="user-profiles">
+                  <div class=" flex -space-x-2 items-center" >
+                    <div  v-for="(user, index) in company.users.slice(0, 5)" :key="index" class="rounded-full h-8 w-8">
+                      <img class="inline-block h-8 w-8 rounded-full ring-2 ring-white " :src="user" alt="user-profiles">
                     </div>
                     <div class="rounded-full h-6 w-6 bg-purple-50 text-purple-700 ring-2 ring-white flex items-center text-xs font-semibold" v-if="company.users.length > 5" >
                       +{{(company.users.length) - 5}}
                     </div>
                   </div>
-                  
+
                 </td>
 
                 <td class="px-6 py-4 whitespace-nowrap">
                   <div class="text-sm text-slate-700 font-semibold">{{ company.title }}</div>
                   <div class="text-sm text-gray-500">{{ company.description }}</div>
                 </td>
-                <td class="px-6 py-4 whitespace-nowrap text-right text-sm text-gray-400 flex flex-wrap items-center ">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <td class="px-6 py-4 whitespace-nowrap text-right text-sm text-gray-400 flex flex-wrap lg:items-center  justify-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="lg:h-4 lg:w-4 h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
                   </svg>
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="lg:h-4 lg:w-4 h-6 w-6 ml-4 lg:mt-0 mt-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
                   </svg>
                 </td>
@@ -79,6 +84,25 @@
         </div>
       </div>
     </div>
+      <div class="flex items-center justify-around visible lg:invisible mt-3 text-slate-700">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 17l-5-5m0 0l5-5m-5 5h12" />
+        </svg>
+        <span>Page 1 of 10</span>
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+        </svg>
+    </div>
+    <div class="flex justify-between invisible lg:visible">
+      <div class="flex mt-3 mb-3 ml-2">
+        <button class="border-slate-300 border rounded bg-white px-2 py-2 text-sm">Previous</button>
+        <button class="border-slate-300 border rounded bg-white px-3 py-2 text-sm ml-2">Next</button>
+      </div>
+      <div class="text-sm text-slate-700 flex items-center pr-2">
+        <span>Page 1 of 10</span>
+      </div>
+    </div>
+
   </div>
 </template>
 
@@ -87,7 +111,7 @@ const companies = [
   {
     company: 'Catalog',
     domain: ' catalogApp.io',
-    status:'customer',
+    status:' Customer',
     license: 75,
     image:
       'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60',
@@ -112,7 +136,8 @@ const companies = [
     {
     company: 'Circooles',
     domain: ' getCircooles.com',
-    status:'churned',
+    status:'Churned',
+    isCustomer: false,
     license: 45,
     image:
       'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60',
@@ -129,13 +154,13 @@ const companies = [
         'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZmlsZSUyMGltYWdlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60',
         'https://media.istockphoto.com/photos/headshot-portrait-of-smiling-ethnic-businessman-in-office-picture-id1300512215?b=1&k=20&m=1300512215&s=170667a&w=0&h=LsZL_-vvAHB2A2sNLHu9Vpoib_3aLLkRamveVW3AGeQ=',
         'https://media.istockphoto.com/photos/portrait-of-a-girl-picture-id938709362?b=1&k=20&m=938709362&s=170667a&w=0&h=7kbyEr_hujTNDsvQ629eb1mQbYCBTdIFy-Fb24DjTg4=',
-      
+
     ]
   },
     {
     company: 'Command+R',
     domain: 'cmdr.io',
-    status:'customer',
+    status:'Customer',
     license: 25,
     image:
       'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60',
@@ -150,13 +175,13 @@ const companies = [
       'https://media.istockphoto.com/photos/headshot-portrait-of-smiling-ethnic-businessman-in-office-picture-id1300512215?b=1&k=20&m=1300512215&s=170667a&w=0&h=LsZL_-vvAHB2A2sNLHu9Vpoib_3aLLkRamveVW3AGeQ=',
       'https://media.istockphoto.com/photos/portrait-of-a-girl-picture-id938709362?b=1&k=20&m=938709362&s=170667a&w=0&h=7kbyEr_hujTNDsvQ629eb1mQbYCBTdIFy-Fb24DjTg4=',
       'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZmlsZSUyMGltYWdlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60'
-    
+
     ]
   },
       {
     company: 'Hourglass',
     domain: 'hourglass.app',
-    status:'customer',
+    status:'Customer',
     license: 75,
     image:
       'https://images.unsplash.com/photo-1582558008094-75a4f90a8553?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=435&q=80',
@@ -168,13 +193,13 @@ const companies = [
       'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fG1hbiUyMHByb2ZpbGUlMjBpbWFnZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60',
       'https://media.istockphoto.com/photos/headshot-portrait-of-smiling-ethnic-businessman-in-office-picture-id1300512215?b=1&k=20&m=1300512215&s=170667a&w=0&h=LsZL_-vvAHB2A2sNLHu9Vpoib_3aLLkRamveVW3AGeQ=',
       'https://media.istockphoto.com/photos/portrait-of-a-girl-picture-id938709362?b=1&k=20&m=938709362&s=170667a&w=0&h=7kbyEr_hujTNDsvQ629eb1mQbYCBTdIFy-Fb24DjTg4=',
-    
+
     ]
   },
       {
     company: 'Layers',
     domain: 'getlayers.io',
-    status:'churned',
+    status:'Churned',
     license: 25,
     image:
       'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60',
@@ -187,13 +212,13 @@ const companies = [
       'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fG1hbiUyMHByb2ZpbGUlMjBpbWFnZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60',
       'https://media.istockphoto.com/photos/headshot-portrait-of-smiling-ethnic-businessman-in-office-picture-id1300512215?b=1&k=20&m=1300512215&s=170667a&w=0&h=LsZL_-vvAHB2A2sNLHu9Vpoib_3aLLkRamveVW3AGeQ=',
       'https://media.istockphoto.com/photos/portrait-of-a-girl-picture-id938709362?b=1&k=20&m=938709362&s=170667a&w=0&h=7kbyEr_hujTNDsvQ629eb1mQbYCBTdIFy-Fb24DjTg4=',
-    
+
     ]
   },
       {
     company: 'Quotient',
     domain: 'quotient.co',
-    status:'customer',
+    status:'Customer',
     license: 15,
     image:
       'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60',
@@ -211,13 +236,13 @@ const companies = [
       'https://media.istockphoto.com/photos/headshot-portrait-of-smiling-ethnic-businessman-in-office-picture-id1300512215?b=1&k=20&m=1300512215&s=170667a&w=0&h=LsZL_-vvAHB2A2sNLHu9Vpoib_3aLLkRamveVW3AGeQ=',
       'https://media.istockphoto.com/photos/portrait-of-a-girl-picture-id938709362?b=1&k=20&m=938709362&s=170667a&w=0&h=7kbyEr_hujTNDsvQ629eb1mQbYCBTdIFy-Fb24DjTg4=',
       'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZmlsZSUyMGltYWdlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60'
-    
+
     ]
   },
       {
     company: 'Sisyphus',
     domain: 'Sisyphus.com',
-    status:'customer',
+    status:'Customer',
     license: 45,
     image:
       'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60',
@@ -233,7 +258,7 @@ const companies = [
             'https://media.istockphoto.com/photos/headshot-portrait-of-smiling-ethnic-businessman-in-office-picture-id1300512215?b=1&k=20&m=1300512215&s=170667a&w=0&h=LsZL_-vvAHB2A2sNLHu9Vpoib_3aLLkRamveVW3AGeQ=',
       'https://media.istockphoto.com/photos/portrait-of-a-girl-picture-id938709362?b=1&k=20&m=938709362&s=170667a&w=0&h=7kbyEr_hujTNDsvQ629eb1mQbYCBTdIFy-Fb24DjTg4=',
       'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZmlsZSUyMGltYWdlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60'
-    
+
     ]
   },
   // More companies...

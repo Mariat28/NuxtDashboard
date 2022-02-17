@@ -5,7 +5,7 @@
       <TopBar/>
     </div>
     <!-- semi topnav -->
-    <div class="bg-white h-full overflow-y-auto overflow-x-hidden -z-50">
+    <div class="bg-white h-full overflow-y-auto overflow-x-hidden -z-50 mainContent">
       <div class=" p-2 pr-0 lg:mt-24 xl:mx-auto xl:container invisible lg:visible">
         <div class=" flex justify-between">
           <div class="text-sm flex items-center  pl-0">
@@ -17,11 +17,11 @@
             <NuxtLink to="/" class="pl-3" >User reports</NuxtLink>
           </div>
           <!-- right search  -->
-          <div class="input-group relative w-72 ml-10 mr-2 flex  items-center rounded border border-solid border-gray-300 focus-within:border-blue-600 focus-within:outline-none ">
+          <div class="input-group  w-72 ml-10 mr-2 flex  items-center rounded-md border border-solid border-gray-300  focus-within:border-blue-600 focus-within:outline-none ">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 ml-2" fill="none" viewBox="0 0 24 24" stroke="#C1C1C1">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
             </svg>
-            <input type="search" class="form-control relative flex-auto min-w-0 block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-neutral-50 bg-clip-padding  rounded-sm transition ease-out m-0 focus:bg-white focus:border-blue-600 focus:outline-none" placeholder="Search">
+            <input type="search" class="form-control  flex-auto min-w-0 w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding  rounded-sm transition ease-out m-0 focus:bg-white focus:border-blue-600 focus:outline-none" placeholder="Search">
           </div>
         </div>
 
@@ -37,12 +37,12 @@
             <span class="text-gray-400 text-xs md:text-sm font-normal">Track, manage and forecast your customers and orders.</span>
           </div>
           <div class="flex mt-6 lg:mt-0">
-            <button class="rounded bg-white border border-gray-400 pl-3 pr-3 p-1 text-sm flex items-center text-black">
+            <button class="rounded bg-white border border-gray-400 px-2 py-1 text-sm flex items-center text-black">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4  mr-2" fill="none" viewBox="0 0 24 24" stroke="#303030">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
               </svg>
               Import</button>
-              <button class="rounded bg-purple-700 border border-gray-400 pl-2 pr-3 p-1 text-sm flex items-center text-white ml-3 font-light">
+              <button class="rounded bg-purple-700 border border-gray-400 px-2 py-1 text-sm flex items-center text-white ml-3 font-light">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 font-light" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
               </svg>
@@ -51,7 +51,7 @@
         </div>
         <!-- cards  -->
         <div class="grid grid-cols-1 md:grid-cols-3  gap-4  mt-6 p-1">
-          <div class="shadow border border-gray-300 flex flex-col justify-between rounded">
+          <div class="shadow border border-gray-300 flex flex-col justify-between rounded p-4">
             <div class="flex justify-between text-sm items-center">
               <span class=" p-2">Total Customers</span>
               <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -60,27 +60,26 @@
             </div>
             <div class="flex justify-between">
               <div class="flex flex-col">
-                <div class="text-xl p-2 font-semibold">2,420</div>
-                <div class="flex text-xs md:text-sm items-center">
+                <div class="text-3xl p-2 font-semibold">2,420</div>
+                <div class="flex text-xs md:text-sm items-center py-2">
                   <div class="text-green-500 flex items-center ">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 11l5-5m0 0l5 5m-5-5v12" />
                     </svg>
-                    <span >40%</span>
+                    <span class="text-green-700">40%</span>
                   </div>
-                  <span class="ml-1 text-gray-400">vs last month</span>
+                  <span class="ml-2 text-gray-400">vs last month</span>
                 </div>
               </div>
               <!-- curve div  -->
-              <div class="flex flex-col relative min-h-full items-center">
-                <div class="curve">
-                </div>
+              <div class=" h-fit w-fit items-center">
+                  <!-- <Chart  :height="400" :width="200" /> -->
               </div>
             </div>
 
           </div>
            <!-- card two  -->
-           <div class="shadow border border-gray-300 flex flex-col justify-between rounded">
+           <div class="shadow border border-gray-300 flex flex-col justify-between rounded p-4">
             <div class="flex justify-between text-sm items-center">
               <span class=" p-2">Members</span>
               <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -89,15 +88,15 @@
             </div>
             <div class="flex justify-between">
               <div class="flex flex-col">
-                <div class="text-xl p-2 font-semibold">1,210</div>
+                <div class="text-3xl p-2 font-semibold">1,210</div>
                 <div class="flex text-xs md:text-sm items-center">
-                  <div class="text-red-500 flex items-center ">
+                  <div class="text-red-500 flex items-center py-2">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 13l-5 5m0 0l-5-5m5 5V6" />
                     </svg>
-                    <span >10%</span>
+                    <span class="text-red-700" >10%</span>
                   </div>
-                  <span class="ml-1 text-gray-400">vs last month</span>
+                  <span class="ml-2 text-gray-400">vs last month</span>
                 </div>
               </div>
               <!-- curve div  -->
@@ -109,7 +108,7 @@
 
           </div>
           <!-- card three  -->
-          <div class="shadow border border-gray-300 flex flex-col justify-between rounded">
+          <div class="shadow border border-gray-300 flex flex-col justify-between rounded p-4">
             <div class="flex justify-between text-sm items-center">
               <span class=" p-2">Active now</span>
               <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -118,15 +117,15 @@
             </div>
             <div class="flex justify-between">
               <div class="flex flex-col">
-                <div class="text-xl p-2 font-semibold">316</div>
-                <div class="flex text-xs md:text-sm items-center">
+                <div class="text-3xl p-2 font-semibold">316</div>
+                <div class="flex text-xs md:text-sm items-center py-2">
                   <div class="text-green-500 flex items-center ">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 11l5-5m0 0l5 5m-5-5v12" />
                     </svg>
-                    <span >20%</span>
+                    <span class="text-green-700">20%</span>
                   </div>
-                  <span class="ml-1 text-gray-400">vs last month</span>
+                  <span class="ml-2 text-gray-400">vs last month</span>
                 </div>
               </div>
               <!-- curve div  -->
@@ -174,7 +173,7 @@
             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 ml-2" fill="none" viewBox="0 0 24 24" stroke="#C1C1C1">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
             </svg>
-            <input type="search" class="form-control relative flex-auto min-w-0 block w-full px-2 py-1 text-base font-normal text-gray-700 bg-white bg-clip-padding  rounded-sm transition ease-out m-0 focus:bg-white focus:border-blue-600 focus:outline-none" placeholder="Search">
+            <input type="search" class="form-control  flex-auto min-w-0 block w-full px-2 py-1 text-base font-normal text-gray-700 bg-white bg-clip-padding  rounded-sm transition ease-out m-0 focus:bg-white focus:border-blue-600 focus:outline-none" placeholder="Search">
           </div>
 
         </div>
@@ -191,3 +190,10 @@
 
   </div>
 </template>
+<script>
+import Chart from './Chart';
+export default {
+  name: 'Dashboard',
+
+}
+</script>

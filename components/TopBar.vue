@@ -68,12 +68,12 @@
               </svg>
             </div>
             <div class="rounded-full h-12 w-12  ml-4 overflow-hidden flex justify-center">
-              <img src="@/assets/images/profile.png" alt="profile Image" class="rounded-full"/>
+              <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"  alt="profile Image" class="rounded-full h-14 w-16"/>
             </div>
           </div>
 
     </div>
-    <hr class="md:mt-4 -mt-6 w-full">
+    <hr class="md:mt-4 -mt-6 w-full fixed md:top-16 top-20 ">
   </div>
 </template>
 <script>
