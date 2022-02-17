@@ -51,7 +51,7 @@
         </div>
         <!-- cards  -->
         <div class="grid grid-cols-1 md:grid-cols-3  gap-4  mt-6 p-1">
-          <div class="shadow border border-gray-300 flex flex-col justify-between rounded">
+          <div class="shadow border border-gray-300 flex flex-col justify-between rounded p-4">
             <div class="flex justify-between text-sm items-center">
               <span class=" p-2">Total Customers</span>
               <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -60,15 +60,15 @@
             </div>
             <div class="flex justify-between">
               <div class="flex flex-col">
-                <div class="text-xl p-2 font-semibold">2,420</div>
+                <div class="text-2xl p-2 font-semibold">2,420</div>
                 <div class="flex text-xs md:text-sm items-center">
                   <div class="text-green-500 flex items-center ">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 11l5-5m0 0l5 5m-5-5v12" />
                     </svg>
-                    <span >40%</span>
+                    <span class="text-green-700">40%</span>
                   </div>
-                  <span class="ml-1 text-gray-400">vs last month</span>
+                  <span class="ml-2 text-gray-400">vs last month</span>
                 </div>
               </div>
               <!-- curve div  -->
@@ -80,7 +80,7 @@
 
           </div>
            <!-- card two  -->
-           <div class="shadow border border-gray-300 flex flex-col justify-between rounded">
+           <div class="shadow border border-gray-300 flex flex-col justify-between rounded p-4">
             <div class="flex justify-between text-sm items-center">
               <span class=" p-2">Members</span>
               <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -89,15 +89,15 @@
             </div>
             <div class="flex justify-between">
               <div class="flex flex-col">
-                <div class="text-xl p-2 font-semibold">1,210</div>
+                <div class="text-2xl p-2 font-semibold">1,210</div>
                 <div class="flex text-xs md:text-sm items-center">
                   <div class="text-red-500 flex items-center ">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 13l-5 5m0 0l-5-5m5 5V6" />
                     </svg>
-                    <span >10%</span>
+                    <span class="text-red-700" >10%</span>
                   </div>
-                  <span class="ml-1 text-gray-400">vs last month</span>
+                  <span class="ml-2 text-gray-400">vs last month</span>
                 </div>
               </div>
               <!-- curve div  -->
@@ -109,7 +109,7 @@
 
           </div>
           <!-- card three  -->
-          <div class="shadow border border-gray-300 flex flex-col justify-between rounded">
+          <div class="shadow border border-gray-300 flex flex-col justify-between rounded p-4">
             <div class="flex justify-between text-sm items-center">
               <span class=" p-2">Active now</span>
               <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -118,15 +118,15 @@
             </div>
             <div class="flex justify-between">
               <div class="flex flex-col">
-                <div class="text-xl p-2 font-semibold">316</div>
+                <div class="text-2xl p-2 font-semibold">316</div>
                 <div class="flex text-xs md:text-sm items-center">
                   <div class="text-green-500 flex items-center ">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 11l5-5m0 0l5 5m-5-5v12" />
                     </svg>
-                    <span >20%</span>
+                    <span class="text-green-700">20%</span>
                   </div>
-                  <span class="ml-1 text-gray-400">vs last month</span>
+                  <span class="ml-2 text-gray-400">vs last month</span>
                 </div>
               </div>
               <!-- curve div  -->
