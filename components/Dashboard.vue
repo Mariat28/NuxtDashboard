@@ -60,8 +60,8 @@
             </div>
             <div class="flex justify-between">
               <div class="flex flex-col">
-                <div class="text-2xl p-2 font-semibold">2,420</div>
-                <div class="flex text-xs md:text-sm items-center">
+                <div class="text-3xl p-2 font-semibold">2,420</div>
+                <div class="flex text-xs md:text-sm items-center py-2">
                   <div class="text-green-500 flex items-center ">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 11l5-5m0 0l5 5m-5-5v12" />
@@ -74,6 +74,7 @@
               <!-- curve div  -->
               <div class="flex flex-col relative min-h-full items-center">
                 <div class="curve">
+                  <Chart :chartdata="dataCollection"/>
                 </div>
               </div>
             </div>
@@ -89,9 +90,9 @@
             </div>
             <div class="flex justify-between">
               <div class="flex flex-col">
-                <div class="text-2xl p-2 font-semibold">1,210</div>
+                <div class="text-3xl p-2 font-semibold">1,210</div>
                 <div class="flex text-xs md:text-sm items-center">
-                  <div class="text-red-500 flex items-center ">
+                  <div class="text-red-500 flex items-center py-2">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 13l-5 5m0 0l-5-5m5 5V6" />
                     </svg>
@@ -118,8 +119,8 @@
             </div>
             <div class="flex justify-between">
               <div class="flex flex-col">
-                <div class="text-2xl p-2 font-semibold">316</div>
-                <div class="flex text-xs md:text-sm items-center">
+                <div class="text-3xl p-2 font-semibold">316</div>
+                <div class="flex text-xs md:text-sm items-center py-2">
                   <div class="text-green-500 flex items-center ">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 11l5-5m0 0l5 5m-5-5v12" />
@@ -191,3 +192,39 @@
 
   </div>
 </template>
+<script>
+
+export default {
+  name: 'Dashboard',
+
+  data() {
+    return {
+      dataCollection: null
+    }
+  },
+  mounted () {
+    this.fillData()
+  },
+  methods: {
+    fillData () {
+      this.datacollection = {
+        labels: [this.getRandomInt(), this.getRandomInt()],
+        datasets: [
+          {
+            label: 'Data One',
+            backgroundColor: '#f87979',
+            data: [this.getRandomInt(), this.getRandomInt()]
+          }, {
+            label: 'Data One',
+            backgroundColor: '#f87979',
+            data: [this.getRandomInt(), this.getRandomInt()]
+          }
+        ]
+      }
+    },
+    getRandomInt () {
+      return Math.floor(Math.random() * (50 - 5 + 1)) + 5
+    }
+  }
+}
+</script>

@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col shadow-md rounded-lg  w-full ">
+  <div class="flex flex-col shadow-md rounded-lg  w-full border-gray-200 border">
     <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8 ">
       <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8 ">
         <div class="shadow lg:overflow-hidden overflow-x-auto border-b border-gray-200  ">
@@ -55,9 +55,9 @@
                   <span class="px-2 py-1 inline-flex text-xs leading-5 font-semibold rounded-full  text-green-800" :class="[ company.status === 'Customer' ? 'bg-green-100' : 'bg-gray-100' ]"> {{company.status}} </span>
                 </td>
                 <td class="text-sm text-gray-500 inline-block text-start" >
-                  <div class=" flex -space-x-4 items-center" >
-                    <div  v-for="(user, index) in company.users.slice(0, 5)" :key="index" class="rounded-full h-10 w-10 ">
-                      <img class="inline-block h-8 w-8 rounded-full ring-2 ring-white" :src="user" alt="user-profiles">
+                  <div class=" flex -space-x-2 items-center" >
+                    <div  v-for="(user, index) in company.users.slice(0, 5)" :key="index" class="rounded-full h-8 w-8">
+                      <img class="inline-block h-8 w-8 rounded-full ring-2 ring-white " :src="user" alt="user-profiles">
                     </div>
                     <div class="rounded-full h-6 w-6 bg-purple-50 text-purple-700 ring-2 ring-white flex items-center text-xs font-semibold" v-if="company.users.length > 5" >
                       +{{(company.users.length) - 5}}
