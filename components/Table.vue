@@ -1,9 +1,9 @@
 <template>
-  <div class="flex flex-col shadow-md rounded-lg  w-full border-gray-200 border">
-    <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8 ">
-      <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8 ">
+  <div class="flex flex-col shadow-md rounded-lg  w-full border-gray-200 border ">
+    <div class="-my-2 overflow-x-auto  w-full ">
+      <div class="py-2 align-middle inline-block w-full  ">
         <div class="shadow lg:overflow-hidden overflow-x-auto border-b border-gray-200  ">
-          <table class="min-w-full divide-y divide-gray-200 ">
+          <table class="min-w-full divide-y divide-gray-200  ">
             <thead class="bg-white">
               <tr class="">
                 <th scope="col" class="px-6 py-3 text-left text-sm font-medium text-slate-700  tracking-wider">

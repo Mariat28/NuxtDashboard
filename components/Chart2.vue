@@ -49,12 +49,12 @@ export default {
         datasets: [
           {
             label: "",
-            borderColor: "green",
+            borderColor: "red",
             pointBackgroundColor: "white",
             borderWidth: 1,
             pointBorderColor: "white",
             backgroundColor: this.color,
-            data: [3, 10, 40, 38, 80]
+            data: [80, 38, 40, 10, 3]
           },
         ],
 

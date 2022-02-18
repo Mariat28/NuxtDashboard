@@ -58,8 +58,8 @@
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
               </svg>
             </div>
-            <div class="flex justify-between">
-              <div class="flex flex-col">
+            <div class="grid grid-cols-2 content-center align-middle  mt-2">
+              <div class="flex flex-col col-span-1">
                 <div class="text-3xl p-2 font-semibold">2,420</div>
                 <div class="flex text-xs md:text-sm items-center py-2">
                   <div class="text-green-500 flex items-center ">
@@ -72,8 +72,10 @@
                 </div>
               </div>
               <!-- curve div  -->
-              <div class=" h-fit w-fit items-center">
-                  <!-- <Chart  :height="400" :width="200" /> -->
+              <div class=" h-full col-span-1">
+                <div class="h-full mt-3">
+                  <Chart :color="'rgba(11, 156, 49, 0.1)'"></Chart>
+                </div>
               </div>
             </div>
 
@@ -86,8 +88,8 @@
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
               </svg>
             </div>
-            <div class="flex justify-between">
-              <div class="flex flex-col">
+            <div class="grid grid-cols-2 content-center align-middle  mt-2">
+              <div class="flex flex-col col-span-1">
                 <div class="text-3xl p-2 font-semibold">1,210</div>
                 <div class="flex text-xs md:text-sm items-center">
                   <div class="text-red-500 flex items-center py-2">
@@ -100,8 +102,9 @@
                 </div>
               </div>
               <!-- curve div  -->
-              <div class="flex flex-col relative min-h-full items-center">
-                <div class="curve">
+              <div class=" h-full col-span-1">
+                <div class="h-full mt-3">
+                  <Chart2 :color="'rgba(255, 56, 96, 0.1)'"></Chart2>
                 </div>
               </div>
             </div>
@@ -115,8 +118,8 @@
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
               </svg>
             </div>
-            <div class="flex justify-between">
-              <div class="flex flex-col">
+            <div class="grid grid-cols-2 content-center align-middle  mt-2">
+              <div class="flex flex-col col-span-1">
                 <div class="text-3xl p-2 font-semibold">316</div>
                 <div class="flex text-xs md:text-sm items-center py-2">
                   <div class="text-green-500 flex items-center ">
@@ -129,8 +132,9 @@
                 </div>
               </div>
               <!-- curve div  -->
-              <div class="flex flex-col relative min-h-full items-center">
-                <div class="curve">
+             <div class=" h-full col-span-1">
+                <div class="h-full mt-3">
+                  <Chart :color="'rgba(11, 156, 49, 0.1)'"></Chart>
                 </div>
               </div>
             </div>
