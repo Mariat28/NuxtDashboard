@@ -6,7 +6,7 @@ import { Line } from "vue-chartjs";
 
 export default {
   extends: Line,
-  props: {color:String},
+  props: {color:String, data:Array, border: String},
   data() {
     return {
       gradient: null,
@@ -49,12 +49,12 @@ export default {
         datasets: [
           {
             label: "",
-            borderColor: "green",
+            borderColor: this.border,
             pointBackgroundColor: "white",
             borderWidth: 1,
             pointBorderColor: "white",
             backgroundColor: this.color,
-            data: [3, 10, 40, 38, 80]
+            data: this.data
           },
         ],
 

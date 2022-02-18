@@ -74,7 +74,7 @@
               <!-- curve div  -->
               <div class=" h-full col-span-1">
                 <div class="h-full mt-3">
-                  <Chart :color="'rgba(11, 156, 49, 0.1)'"></Chart>
+                  <Chart :color="'rgba(11, 156, 49, 0.1)'" :data ="sales" :border="'green'"></Chart>
                 </div>
               </div>
             </div>
@@ -104,7 +104,7 @@
               <!-- curve div  -->
               <div class=" h-full col-span-1">
                 <div class="h-full mt-3">
-                  <Chart2 :color="'rgba(255, 56, 96, 0.1)'"></Chart2>
+                  <Chart :color="'rgba(255, 56, 96, 0.1)'" :data ="members" :border="'red'"></Chart>
                 </div>
               </div>
             </div>
@@ -134,7 +134,7 @@
               <!-- curve div  -->
              <div class=" h-full col-span-1">
                 <div class="h-full mt-3">
-                  <Chart :color="'rgba(11, 156, 49, 0.1)'"></Chart>
+                  <Chart :color="'rgba(11, 156, 49, 0.1)'" :data ="sales" :border="'green'"></Chart>
                 </div>
               </div>
             </div>
@@ -195,9 +195,16 @@
   </div>
 </template>
 <script>
-import Chart from './Chart';
+
 export default {
   name: 'Dashboard',
+  data() {
+    return {
+      members: [80, 38, 40, 10, 3],
+      sales:[3, 10, 40, 38, 80]
+
+    }
+  }
 
 }
 </script>
