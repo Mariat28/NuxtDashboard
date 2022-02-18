@@ -74,7 +74,9 @@
               <!-- curve div  -->
               <div class=" h-full col-span-1">
                 <div class="h-full mt-3">
+                  <client-only>
                   <Chart :color="'rgba(11, 156, 49, 0.1)'" :data ="sales" :border="'green'"></Chart>
+                  </client-only>
                 </div>
               </div>
             </div>
@@ -104,7 +106,9 @@
               <!-- curve div  -->
               <div class=" h-full col-span-1">
                 <div class="h-full mt-3">
+                  <client-only>
                   <Chart :color="'rgba(255, 56, 96, 0.1)'" :data ="members" :border="'red'"></Chart>
+                  </client-only>
                 </div>
               </div>
             </div>
@@ -134,7 +138,9 @@
               <!-- curve div  -->
              <div class=" h-full col-span-1">
                 <div class="h-full mt-3">
+                  <client-only>
                   <Chart :color="'rgba(11, 156, 49, 0.1)'" :data ="sales" :border="'green'"></Chart>
+                  </client-only>
                 </div>
               </div>
             </div>
